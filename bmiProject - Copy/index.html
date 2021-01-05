@@ -15,7 +15,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   </head>
-  <body style="background-color: #352e1d; min-height: 100vh">
+  <body style="background-color: #352e1d; min-height: 100vh" onload="setUnit('fps-system')">
     <div class="container">
       <div class="row">
         <div class="col-sm-2" style="background-color: #352e1d"></div>
@@ -82,8 +82,22 @@
                     Calculate
                   </button>
                 </div>
+                <div class="d-flex justify-content-center">
+                  <div class="form-check pr-4">
+                    <input type="radio" class="form-check-input" id="fps" name="choice" onchange="setUnit('fps-system')" value="fps-system" checked >
+                    <label class="form-check-label" for="fps">
+                     FPS System
+                    </label>
+                  </div>
+                  <div class="form-check pl-4">
+                    <input type="radio" class="form-check-input" id="cgs" name="choice" onchange="setUnit('cgs-system')" value="cgs-system" >
+                    <label class="form-check-label" for="cgs">
+                      CGS System
+                    </label>
+                  </div>
+                </div>
                 <div class="d-flex justify-content-center my-3">
-                  <p>Please input your height (m) and weight (kg)</p>
+                  <p>Please input your height in <span id="height-unit"></span> and weight in <span id="weight-unit"></span></p>
                 </div>
                 <section id="acordion" class="container">
                   <div class="row">
